@@ -1,0 +1,16 @@
+#!/bin/sh
+set -e
+package_name=disable-blueman-dde
+mkdir -p "/usr/share/dpkgdivert/disable-blueman-dde"
+case "$1" in
+  install)
+    dpkg-divert --package "$package_name" --divert "/usr/share/dpkgdivert/disable-blueman-dde/etcxdgautostartblueman.desktop" --rename "/etc/xdg/autostart/blueman.desktop"
+    ;;
+  upgrade)
+if [ "$(dpkg-divert --list "/etc/xdg/autostart/blueman.desktop")" = "" ]
+then
+    dpkg-divert --package "$package_name" --divert "/usr/share/dpkgdivert/disable-blueman-dde/etcxdgautostartblueman.desktop" --rename "/etc/xdg/autostart/blueman.desktop"
+fi
+;;
+esac
+exit 0

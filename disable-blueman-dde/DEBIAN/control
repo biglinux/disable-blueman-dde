@@ -1,0 +1,9 @@
+Package: disable-blueman-dde
+Version: 1.0.0-1big2
+Depends: blueman
+Architecture: all
+Maintainer: Bruno Goncalves <www.biglinux.com.br>
+Section: admin
+Priority: optional
+Installed-Size:44
+Description: Disable Blueman in Deepin Desktop

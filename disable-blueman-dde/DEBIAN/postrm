@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+package_name=disable-blueman-dde
+case "$1" in
+  remove)
+    dpkg-divert --package "$package_name" --rename --remove "/etc/xdg/autostart/blueman.desktop"
+    ;;
+  purge)
+    dpkg-divert --package "$package_name" --rename --remove "/etc/xdg/autostart/blueman.desktop"
+;;
+esac
+exit 0

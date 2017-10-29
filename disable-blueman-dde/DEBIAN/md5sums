@@ -1,0 +1,6 @@
+d4639f7564fab7fb6802f58802a0542e  DEBIAN/control
+d41d8cd98f00b204e9800998ecf8427e  DEBIAN/md5sums
+7f4e9bdb9b8032fa24cca05fef1e785b  DEBIAN/dpkg-divert
+4b3e00e645e3d7b401e00482b4fb2a72  DEBIAN/postrm
+ba2551dbbe87626704d941faad95f1c4  DEBIAN/preinst
+a57d37c9f40aba10e96da37d6695e8cd  etc/xdg/autostart/blueman.desktop
